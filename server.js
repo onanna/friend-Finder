@@ -22,4 +22,6 @@ require('./app/routing/api-routes.js')(app);
 require('./app/routing/html-routes.js')(app);
 
 //Listening to the port that was set up
-app.listen(PORT, () => console.log("Listening on port %s", PORT));
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
