@@ -5,7 +5,7 @@ var path = require('path');
 
 //creates express server and sets up a port
 var app = express(); 
-var port = process.env.PORT || 3000; 
+var PORT = process.env.PORT || 3000; 
 
 //Body Parser
 app.use(bodyParser.json());
@@ -22,4 +22,4 @@ require('./app/routing/api-routes.js')(app);
 require('./app/routing/html-routes.js')(app);
 
 //Listening to the port that was set up
-app.listen(port, () => console.log("Listening on port %s", port));
+app.listen(PORT, () => console.log("Listening on port %s", PORT));
