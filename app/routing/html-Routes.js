@@ -1,9 +1,10 @@
 //Dependency
 var path = require('path');
-var express = require('express')
-var app = express()
+var express = require('express');
+var app = express();
+const router = express.Router();
 //route
-module.exports = function(app){
+
 
 //GET request 
 	app.get('/survey', function(req, res){
@@ -15,4 +16,3 @@ module.exports = function(app){
 		res.sendFile(path.join(__dirname + '/../public/home.html'));
 	});
 
-}
