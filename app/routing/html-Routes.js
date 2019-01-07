@@ -13,8 +13,8 @@ const router = express.Router();
 	});
 
 	// If no matching route is found default to home
-	router.use( "/home", function(req, res){
-		res.render('../public/home.html');
+	router.get( "/", function(req, res){
+		res.sendFile(path.join(__dirname, '../public',"home.html"));
 	});
 
 module.exports = router
